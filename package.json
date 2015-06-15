@@ -1,6 +1,7 @@
 {
   "name": "flyone",
   "version": "1.0.0",
+  "private": "true",
   "description": "flyONE: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
