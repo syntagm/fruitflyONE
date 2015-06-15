@@ -1,14 +1,4 @@
 {
-  "name": "flyONE",
-  "app_id": "",
-  "gulpStartupTasks": [
-    "sass",
-    "watch"
-  ],
-  "watchPatterns": [
-    "www/**/*",
-    "!www/lib/**/*"
-  ]
+  "name": "fruitflyONE",
+  "app_id": ""
 }
-
-"gulpStartupTasks": ["sass", "watch"]
