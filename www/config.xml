@@ -4,12 +4,12 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "za.co.syntagm.flyONE"
-        version   = "1.0.0">
+        version   = "1.0.171">
 
   <name>flyONE</name>
 
   <description>
-        A synAPPS project.
+        A synAPPS Fruit Fly project.
   </description>
 
   <author email="syntagm@icon.co.za" href="http://www.appfarm.co.za/">
@@ -40,7 +40,7 @@
   <preference name="BackupWebStorage"           value="none"/>
   <preference name="SplashScreen"               value="screen"/>
   <preference name="SplashScreenDelay"          value="3000"/>
-  
+
 
     <!-- Define app icon for each platform. -->
     <icon src="res/icon/android/icon-36-ldpi.png" />
