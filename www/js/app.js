@@ -1,6 +1,6 @@
 // Ionic Starter App
 
-angular.module('ionicApp', ['ionic'])
+var example = angular.module('ionicApp', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
