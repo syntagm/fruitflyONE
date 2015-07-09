@@ -81,6 +81,31 @@ Parse.initialize("VeOAN2nRQDXf2CJ1aypkAeVGIhHbSuI05b1Hwlgd", "BhlQJ6JTZ9mV0kBhVi
 example.controller("ExampleController", function($scope) {
 
 var Post = Parse.Object.extend("Post");
+
+function getPosts() {
+  var query = new Parse.Query(Post);
+  query.find({
+    success: function(results){
+      var output ="";
+      for (var i in results){
+          var title = results[i].get("title");
+          var content = results[i].get("content");
+          output += "<li>";
+          output += "<h3>"+title+"</h3>";
+          output += "<p>"+content+"</p>";
+          output += "</li>";
+          //console.log("Title:"+title)
+      }
+      $("#list-posts").html(output);
+    }, error: function(error){
+      console.log("Query Error:"+error.message);
+    }
+  });
+}
+
+getPosts();
+
+
 $("#post-form").submit(function(event){
   event.preventDefault();
     var title = $("#post-title").val();
@@ -102,6 +127,8 @@ $("#post-form").submit(function(event){
 });
 
 });
+
+
 
 /*
 Parse.GeoPoint.current({
