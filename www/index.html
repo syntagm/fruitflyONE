@@ -18,62 +18,11 @@
 </head>
 
 <body>
-
-<div id="main">
-  <ion-content>
-    <ion-pane>
-      <h1>You are ready to submit to Parse!</h1>
-      <p>Complete and click SUBMIT</p>
-    </ion-pane>
-  </ion-content>
-    <form id="post-form">
-      <label class="item item-input ">
-        <span class="input-label">Title</span>
-        <input id="post-title" type="text">
-      </label>
-      <label class="item item-input ">
-        <span class="input-label">Content</span>
-        <input id="post-content" type="text">
-      </label>
-
-      <br>
-      <button class="button button-assertive">
-      <input id="post-submit" type="submit">
-      </button>
-      <p></p>
-      <p></p>
-    </form>
-</div>
-
-
-  <script type="text/javascript">
-      Parse.initialize("VeOAN2nRQDXf2CJ1aypkAeVGIhHbSuI05b1Hwlgd", "BhlQJ6JTZ9mV0kBhViVOKeFPddNKubrz5camfsS8");
-      var Post = Parse.Object.extend("Post");
-      $("#post-form").submit(function(event){
-        event.preventDefault();
-          var title = $("#post-title").val();
-          var content = $("#post-content").val();
-
-          var newPost = new Post();
-          newPost.set("title", title);
-          newPost.set("content", content);
-
-          newPost.save({
-            success: function(){
-
-            }, error: function(error){
-                console.log("Error:" *error.message);
-            }
-          });
-      });
-  </script>
   <ion-nav-bar class="bar-royal">
     <ion-nav-back-button>
     </ion-nav-back-button>
   </ion-nav-bar>
-
   <ion-nav-view></ion-nav-view>
-
 
   <script id="templates/tabs.html" type="text/ng-template">
     <ion-tabs class="tabs-icon-top tabs-dark">
@@ -110,9 +59,13 @@
   <h2>agriPUSH Up and running</h2>
   <p>Download this app and stay connected</p>
   </div>
-
+  <div class="item item-avatar">
+  <img src="icon.png">
+  <h2>You can ask questions</h2>
+  <p>Click on the STAR below and submit your question</p>
+  </div>
   <div class="item item-image">
-  <img src="img/scr1.png">
+  <img src="img/scr1.png" width="100%" height="100%">
   </div>
   <a class="item item-icon-left royal" href="#">
   <a class="button button-royal icon icon-right ion-social-google" href="https://play.google.com/store/apps/details?id=za.co.syntagm.agriPush&hl=en">Get agriPUSH from Google PLAY</a>
@@ -169,15 +122,33 @@
   </script>
 
   <script id="templates/about.html" type="text/ng-template">
-    <ion-view view-title="About">
+    <ion-view view-title="Submit your questions">
       <ion-content class="padding">
-        <h3>About the new mobile application</h3>
-        <p>a library of mobile-optimized HTML, CSS and JS components for building a interactive app.</p>
-        <p>Built with Sass and optimized for AngularJS.</p>
-        <p>
-          <a class="button icon icon-right ion-chevron-right" href="#/tab/navstack">Screenshots</a>
-        </p>
+      <div data-ng-controller="ExampleController">
+
+          <form id="post-form">
+            <label class="item item-input ">
+              <span class="input-label">Title</span>
+              <input id="post-title" type="text">
+            </label><br>
+            <label class="item item-input ">
+              <span class="input-label">Content</span>
+              <input id="post-content" type="text">
+            </label>
+            <br>
+
+            <button class="button button-assertive">
+            <input id="post-submit" type="submit">
+            </button>
+        </form>
+      </div>
+      <div class="card">
+  <div class="item item-text-wrap">
+    Submit your questions here. We will soon provide a set of answers to all Frequently Asked Questions (FAQs)
+  </div>
+</div>
       </ion-content>
+
     </ion-view>
   </script>
 
@@ -228,13 +199,27 @@
 
       <div class="card">
         <div class="item item-text-wrap">
-        Next
+        The app developer
+        Tel: 082 456 7031
+        Email: chris@appfarm.co.za
         </div>
       </div>
       </ion-content>
     </ion-view>
   </script>
-
+  <div class="bar bar-footer">
+    <div class="tabs tabs-icon-only">
+  <a class="tab-item" href="#/tab/home">
+    <i class="icon ion-home"></i>
+  </a>
+  <a class="tab-item" href="#/tab/about">
+    <i class="icon ion-star"></i>
+  </a>
+  <a class="tab-item" ui-sref="tabs.contact">
+    <i class="icon ion-gear-a"></i>
+  </a>
+</div>
+  </div>
 </body>
 
 </html>
