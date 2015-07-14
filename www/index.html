@@ -3,12 +3,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-    <title>Tabs Example</title>
+    <title>fruitflyONE</title>
     <meta name="description" content="My Parse App">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/ionic.css">
+    <link rel="stylesheet" href="/lib/ionic/css/ionic.css">
     <link href="css/ionic.app.css" rel="stylesheet">
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -18,11 +18,11 @@
 </head>
 
 <body>
-  <ion-nav-bar class="bar-royal">
+  <ion-nav-bar class="bar-assertive">
     <ion-nav-back-button>
     </ion-nav-back-button>
   </ion-nav-bar>
-  <ion-nav-view></ion-nav-view>
+  <ion-nav-view></ion-nav-view><br /><br />
 
   <script id="templates/tabs.html" type="text/ng-template">
     <ion-tabs class="tabs-icon-top tabs-dark">
@@ -62,7 +62,7 @@
   <div class="item item-avatar">
   <img src="icon.png">
   <h2>You can ask questions</h2>
-  <p>Click on the STAR below and submit your question</p>
+  <p>Click on ABOUT and submit your question</p>
   </div>
   <div class="item item-image">
   <img src="img/scr1.png" width="100%" height="100%">
@@ -126,6 +126,48 @@
       <ion-content class="padding">
       <div data-ng-controller="ExampleController">
 
+            <h3>Login (blue) or SignUp (green)</h3>
+            <p>You only have to sign up the first time</p><br />
+
+            <h3>Log Out</h3>
+              <button class="button button-assertive">
+                <input id="logout" type="submit">
+              </button>
+            <br />
+            <hr>
+            <form id="login">
+              <label class="item item-input item-calm">
+                <span class="input-label">User Name</span>
+                <input id="login-name" type="text">
+              </label><br>
+              <label class="item item-input item-calm">
+                <span class="input-label">Password</span>
+                <input id="login-password" type="password">
+              </label><br>
+              <button class="button button-calm">
+              <input id="login-submit" type="submit">
+              </button>
+            </form>
+            <br />
+            <hr>
+
+
+          <div id="current-user"></div>
+          <form id="signup">
+            <label class="item item-input item-balanced">
+              <span class="input-label">Choose User Name</span>
+              <input id="signup-name" type="text">
+            </label><br>
+            <label class="item item-input item-balanced">
+              <span class="input-label">Choose Password</span>
+              <input id="signup-password" type="password">
+            </label><br>
+            <button class="button button-balanced">
+              <input id="signup-submit" type="submit">
+            </button>
+          </form>
+
+
           <form id="post-form">
             <label class="item item-input ">
               <span class="input-label">Question Title</span>
@@ -145,9 +187,10 @@
     <h1> Previously asked questions </h1>
     <hr>
       <ul id="list-posts">
-        /* <li>
+      List
+         <li>
           <h3>  </h3>
-        </li> */
+        </li>
       </ul>
     </div>
       </div>
@@ -216,19 +259,6 @@
       </ion-content>
     </ion-view>
   </script>
-  <div class="bar bar-footer">
-    <div class="tabs tabs-icon-only">
-  <a class="tab-item" href="#/tab/home">
-    <i class="icon ion-home"></i>
-  </a>
-  <a class="tab-item" href="#/tab/about">
-    <i class="icon ion-star"></i>
-  </a>
-  <a class="tab-item" ui-sref="tabs.contact">
-    <i class="icon ion-gear-a"></i>
-  </a>
-</div>
-  </div>
 </body>
 
 </html>

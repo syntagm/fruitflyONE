@@ -74,13 +74,31 @@ The controller sets properties on the scope, and the view binds to those propert
   console.log('HomeTabCtrl');
 });
 
-
-
-Parse.initialize("VeOAN2nRQDXf2CJ1aypkAeVGIhHbSuI05b1Hwlgd", "BhlQJ6JTZ9mV0kBhViVOKeFPddNKubrz5camfsS8");
+Parse.initialize("ZunQGkmJDa2Ec6QY24E8jmqqkn8RzhcHKiwOcY6O", "wI4KKjeRqOlHAZRfnpGoypCveD6ZcbNopeDnYMuv");
+Parse.User.enableRevocableSession()
 
 example.controller("ExampleController", function($scope) {
 
 var Post = Parse.Object.extend("Post");
+
+$("#signup").submit(function(event){
+  event.preventDefault();
+
+    var name = $("#signup-name").val();
+    var pass = $("#signup-password").val();
+
+    var user = new Parse.User();
+    user.set("username", name);
+    user.set("password", pass);
+
+    user.signUp(null, {
+      success: function(user){
+        //console.log("signup success:"+success.message);
+      }, error: function(user, error){
+        console.log("signup error:"+error.message);
+      }
+    });
+  });
 
 function getPosts() {
   var query = new Parse.Query(Post);
@@ -105,36 +123,21 @@ function getPosts() {
 
 getPosts();
 
-
 $("#post-form").submit(function(event){
   event.preventDefault();
     var title = $("#post-title").val();
     var content = $("#post-content").val();
-    var geoPoint = $("#post-geoPoint").val();
 
     var newPost = new Post();
     newPost.set("title", title);
     newPost.set("content", content);
-    newPost.set("geoPoint", geoPoint);
 
     newPost.save({
       success: function(){
 
       }, error: function(error){
-          console.log("Error:" *error.message);
+          console.log("Error:" +error.message);
       }
     });
+  });
 });
-
-});
-
-
-
-/*
-Parse.GeoPoint.current({
-    success: function (point) {
-        //use current location
-        console.log(point);
-    }
-});
-*/
