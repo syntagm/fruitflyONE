@@ -81,6 +81,43 @@ example.controller("ExampleController", function($scope) {
 
 var Post = Parse.Object.extend("Post");
 
+function checkLogin(){
+  if (Parse.User.current()){
+    console.log("Logged in! "+Parse.User.current().get("username"));
+    $("current-user").html("User: "+Parse.User.current().get("username"));
+  } else {
+      $("current-user").html("");
+  }
+}
+
+checkLogin();
+$scope.data = {
+  label: "username"
+};
+
+$("#logout").click(function(event) {
+  Parse.User.logOut();
+  console.log("You are now logged out!");
+  checkLogin();
+});
+
+$("#login").submit(function(event){
+  event.preventDefault();
+  // this prevents people from refreshing the browser
+  var name = $("#login-name").val();
+  var pass = $("#login-password").val();
+  //so next we have to send parse the uname and pass
+  Parse.User.logIn(name, pass, {
+    success: function(user){
+      //success passes the user object back with a message
+      console.log("You are now logged in!");
+      checkLogin();
+    }, error: function(user, error){
+      console.log("Log in failed!"+error.message);
+    }
+  });
+});
+
 $("#signup").submit(function(event){
   event.preventDefault();
 
@@ -93,7 +130,7 @@ $("#signup").submit(function(event){
 
     user.signUp(null, {
       success: function(user){
-        //console.log("signup success:"+success.message);
+        checkLogin();
       }, error: function(user, error){
         console.log("signup error:"+error.message);
       }
