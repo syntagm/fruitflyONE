@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="za.co.syntagm.flyONE" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="za.co.syntagm.flyONE" version="1.0.0715" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>flyONE</name>
   <description>
-        An Ionic Framework and Cordova project.
+        An flyONE project.
     </description>
   <author email="syntagm@icon.co.za" href="http://www.appfarm.co.za/">
       Ionic synAPPS Team
