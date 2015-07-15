@@ -127,16 +127,12 @@
       <div data-ng-controller="ExampleController">
 
             <h3>Login (blue) or SignUp (green)</h3>
-            <p>You only have to sign up the first time</p><br />
+            <p>You only have to sign up the first time</p>
+            <p>If logged in your name will show up under the logout button</p>
+            <h3></h3>
+            <div><button id="logout">Log out before leaving</button></div>
 
-            <!--<div class="ExampleController" data-ng-app="ionicApp">
-              <div data-ng-controller="ExampleController">
-                <button class="button button-royal">{{data.label}}</button>
-              </div>
-            </div>-->
-
-            <h3>Log out</h3>
-            <div><button id="logout">Log out</button></div><br />
+            <div id="current-user"></div><br />
 
             <form id="login">
               <label class="item item-input item-calm">

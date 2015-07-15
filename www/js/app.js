@@ -81,19 +81,16 @@ example.controller("ExampleController", function($scope) {
 
 var Post = Parse.Object.extend("Post");
 
-function checkLogin(){
+function checkLogin() {
   if (Parse.User.current()){
     console.log("Logged in! "+Parse.User.current().get("username"));
-    $("current-user").html("User: "+Parse.User.current().get("username"));
+    $("#current-user").html("User: "+Parse.User.current().get("username"));
   } else {
-      $("current-user").html("");
+      $("#current-user").html("");
   }
 }
 
 checkLogin();
-$scope.data = {
-  label: "username"
-};
 
 $("#logout").click(function(event) {
   Parse.User.logOut();
