@@ -7,7 +7,8 @@
     <meta name="description" content="My Parse App">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="/lib/ionic/css/ionic.css">
     <link href="css/ionic.app.css" rel="stylesheet">
 
@@ -31,11 +32,11 @@
         <ion-nav-view name="home-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="About" icon="ion-ios-information" href="#/tab/about">
+      <ion-tab title="LogIn" icon="ion-ios-information" href="#/tab/about">
         <ion-nav-view name="about-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Contact" icon="ion-ios-world" ui-sref="tabs.contact">
+      <ion-tab title="Contacts" icon="ion-ios-world" ui-sref="tabs.contact">
         <ion-nav-view name="contact-tab"></ion-nav-view>
       </ion-tab>
 
@@ -43,130 +44,73 @@
   </script>
 
   <script id="templates/home.html" type="text/ng-template">
-    <ion-view view-title="Home">
-      <ion-content class="padding">
-        <p>
-          <a class="button button-full button-energized" href="#/tab/facts">About flyONE</a>
-        </p>
-        <p>
-          <a class="button button-full button-energized" href="#/tab/facts2">About agriPUSH</a>
-        </p>
-        <br>
-        <div class="list card">
+    <ion-view view-title="Viking Support App">
+    <ion-content class="background" scroll="true">
+    <ion-list>
+    </br>
+      <div class="card-red">
+        <div class="item card-red item-text-wrap">
+          <img src="fullogo.png" height='100%' width='80%'>
+        </div>
+      </div>
+    </br>
 
-  <div class="item item-avatar">
-  <img src="icon.png">
-  <h2>agriPUSH Up and running</h2>
-  <p>Download this app and stay connected</p>
-  </div>
-  <div class="item item-avatar">
-  <img src="icon.png">
-  <h2>You can ask questions</h2>
-  <p>Click on ABOUT and submit your question</p>
-  </div>
-  <div class="item item-image">
-  <img src="img/scr1.png" width="100%" height="100%">
-  </div>
-  <a class="item item-icon-left royal" href="#">
-  <a class="button button-royal icon icon-right ion-social-google" href="https://play.google.com/store/apps/details?id=za.co.syntagm.agriPush&hl=en">Get agriPUSH from Google PLAY</a>
-  </a>
+    <div class="list card-dark">
 
-  </div>
-      </ion-content>
-    </ion-view>
+    <div class="item item-avatar">
+      <img src="logo.jpg">
+      <h2>Crop Protection Experts</h2>
+      <p>For over 20 years</p>
+    </div>
+
+    <div class="item item-body">
+      <img class="full-image" src="about.jpg">
+      <p>
+        For over 20 years, we at Viking have been committed to supporting South African
+        growers with the highest quality crop protection and weed control products so
+        that the maximum outputs can be achieved.</p>
+
+        <p>We are committed to "Good Agricultural Practices" and environmental control technology.</p>
+
+        <p>It is Vikings agents and employees, working together, who deliver and build
+          the real value of the business to ensure that we will always be partners of
+          the South African growers.</P
+      </p>
+      <p>
+        <a href="#" class="subdued">1 Like</a>
+        <a href="#" class="subdued">5 Comments</a>
+      </p>
+    </div>
+
+    <div class="item tabs tabs-secondary tabs-icon-left">
+      <a class="tab-item" href="#">
+        <i class="icon ion-thumbsup"></i>
+        Like
+      </a>
+      <a class="tab-item" href="#/tab/facts">
+        <i class="icon ion-chatbox"></i>
+        Post Comment
+      </a>
+      <a class="tab-item" href="#/tab/facts2">
+        <i class="icon ion-share"></i>
+        Read Comments
+      </a>
+    </div>
+
+    </div>
+  </ion-list>
+  </ion-content>
+  </ion-view>
   </script>
 
   <script id="templates/facts.html" type="text/ng-template">
-    <ion-view view-title="About flyONE">
-      <ion-content class="padding">
-        <h3>A New app to monitor Fruit Fly Traps</h3>
-        <h4>Coming soon to your mobile device</h4>
-        <p>We are currently developing and testing a new app to monitor Fruit Fly Traps in the field.</p>
-        <p>flyONE (the app your are now looking at) is designed to help you prepare for and understand the new app</p>
-        <p>It is not the <b>new app</b>. The latter will have a different look and feel and a different name.</p>
-        <p>Everything you need to know about the <b>new app</b> will first be published here.</p>
-        <hr>
-        <h4>What is an "App"?</h4>
-        <p>"App" is short for 'mobile application'.</p>
-        <p>It is a programme that runs on your mobile device and which is designed to make a regularly performed task easier, faster and more accurate.</p>
-        <h4>I have questions</h4>
-        <p>Of course you have!</p>
-        <p>We you soon provide a facility within flyONE (this app) that will make it possible for you to send us your questions.</p>
-        <p>We will answer the most Frequently Asked Questions (FAQs first)</p>
-        <h4>How do I keep updated?</h4>
-        <p>Read about agriPUSH and then download the app and you will receive regular update notifications.</p>
-        <p></p>
-        <p>
-          <a class="button icon ion-home" href="#/tab/home"> Home</a>
-          <a class="button button-royal icon icon-right ion-chevron-right" href="#/tab/facts2">About agriPUSH</a>
-        </p>
-      </ion-content>
-    </ion-view>
-  </script>
-
-  <script id="templates/facts2.html" type="text/ng-template">
-    <ion-view view-title="About Push">
-      <ion-content class="padding">
-        <p>Push notifications notify a user of new messages or events even when the user is not actively using the application. On Android devices, when a device receives a push notification, the application icon and a message appear in the status bar. When you tap the notification, you access your application. Notifications can be broadcast to all users, such as for a marketing campaign, or sent to just a subset of users, to give personalized information.</p>
-        <p>We are developing and using new technology to combat the Fruit Fly challenge in South Africa. That means a continuous stream of upgrades and roll-outs to keep abreast of.</p>
-        <p>We will use push notifications to keep you up to date.</p>
-        <p>A good example of push notification in practice is the EskomSEPush app also available in Google PLAY. It alerts the user to upcoming loadshedding events.</p>
-        <br>
-        <img src="img/eskom.png">
-        <p>
-          <a class="button icon ion-home" href="#/tab/home"> Home</a>
-          <a class="button icon ion-chevron-left" href="#/tab/facts"> Scientific Facts</a>
-        </p>
-      </ion-content>
-    </ion-view>
-  </script>
-
-  <script id="templates/about.html" type="text/ng-template">
-    <ion-view view-title="Submit your questions">
-      <ion-content class="padding">
-      <div data-ng-controller="ExampleController">
-
-            <h3>Login (blue) or SignUp (green)</h3>
-            <p>You only have to sign up the first time</p>
-            <p>If logged in your name will show up under the logout button</p>
-            <h3></h3>
-            <div><button id="logout">Log out before leaving</button></div>
-
-            <div id="current-user"></div><br />
-
-            <form id="login">
-              <label class="item item-input item-calm">
-                <span class="input-label">User Name</span>
-                <input id="login-name" type="text">
-              </label><br>
-              <label class="item item-input item-calm">
-                <span class="input-label">Password</span>
-                <input id="login-password" type="password">
-              </label><br>
-              <button class="button button-calm">
-              <input id="login-submit" type="submit">
-              </button>
-            </form>
-            <br />
-            <hr>
-
-
-          <div id="current-user"></div>
-          <form id="signup">
-            <label class="item item-input item-balanced">
-              <span class="input-label">Choose User Name</span>
-              <input id="signup-name" type="text">
-            </label><br>
-            <label class="item item-input item-balanced">
-              <span class="input-label">Choose Password</span>
-              <input id="signup-password" type="password">
-            </label><br>
-            <button class="button button-balanced">
-              <input id="signup-submit" type="submit">
-            </button>
-          </form>
-
-
+  <ion-view view-title="Post a Comment">
+    <ion-content class="background2" scroll="true">
+    <div data-ng-controller="ExampleController">
+    <div class="card-red">
+          <div class="item card-red item-text-wrap">
+          <h1>Post</h1>
+          <p> You have to be logged in to Post</p>
           <form id="post-form">
             <label class="item item-input ">
               <span class="input-label">Question Title</span>
@@ -180,26 +124,102 @@
             <button class="button button-assertive">
             <input id="post-submit" type="submit">
             </button>
-        </form>
-        <div class="card">
-    <div class="item item-text-wrap">
-    <h1> Previously asked questions </h1>
-    <hr>
-      <ul id="list-posts">
-      List
-         <li>
-          <h3>  </h3>
-        </li>
-      </ul>
+          </form>
+          <p>
+          <a class="button button-full button-energized" href="#/tab/home">HOME</a>
+        </p><br />
+          </div>
     </div>
-      </div>
-      <div class="card">
-  <div class="item item-text-wrap">
-    Submit your questions here. We will soon provide a set of answers to all Frequently Asked Questions (FAQs)
-  </div>
-</div>
-      </ion-content>
+    </div>
+    </ion-content>
+    </ion-view>
+  </script>
 
+  <script id="templates/facts2.html" type="text/ng-template">
+  <ion-view view-title="Read a Comment">
+    <ion-content class="background2" scroll="true">
+    <div data-ng-controller="ExampleController">
+    <div class="card-red">
+          <div class="item card-red item-text-wrap">
+          <h1> Previously asked questions </h1>
+          <hr>
+            <ul id="list-posts">
+            List
+            <li>
+            <h3>  </h3>
+            </li>
+            </ul>
+          <p>
+          <a class="button button-full button-energized" href="#/tab/home">HOME</a>
+        </p><br />
+          </div>
+    </div>
+    </div>
+    </ion-content>
+    </ion-view>
+  </script>
+
+  <script id="templates/about.html" type="text/ng-template">
+    <ion-view view-title="LogIn or SignUp">
+      <ion-content class="background2" scroll="true">
+      <div data-ng-controller="ExampleController">
+      <div class="card-red">
+            <div class="item card-red item-text-wrap">
+            <h1>Login</h1>
+            <H2>You only have to sign up the first time</H2>
+            <p>Scroll down to SignUp</p>
+            <p>If logged in your name will show up under the logout button</p>
+            <h3></h3>
+
+          <div><button id="logout">Log out HERE before leaving</button></div>
+
+          <div id="current-user"></div><br />
+
+          <form id="login">
+            <label class="item item-input item-light">
+              <span class="input-label">UserName</span>
+              <input id="login-name" type="text">
+            </label><br>
+            <label class="item item-input item-light">
+              <span class="input-label">Password</span>
+              <input id="login-password" type="password">
+            </label><br>
+            <button class="button button-light">
+            <input id="login-submit" type="submit">
+            </button>
+          </form>
+          <br />
+          <p>
+          <a class="button button-full button-energized" href="#/tab/facts">Post a Comment</a>
+        </p><br />
+          </div>
+          <br />
+          <div class="card-red">
+          <div class="item card-red item-text-wrap">
+          <div id="current-user"></div>
+        <form id="signup">
+        <h1>SignUp</h1>
+        <p> Choose a user name and a password</p>
+        <p> Keep a record of both because they cannot be retrieved</P>
+          <label class="item item-input item-light">
+            <span class="input-label">UserName</span>
+            <input id="signup-name" type="text">
+          </label><br>
+          <label class="item item-input item-light">
+            <span class="input-label">Password</span>
+            <input id="signup-password" type="password">
+          </label><br>
+          <button class="button button-light">
+            <input id="signup-submit" type="submit">
+          </button>
+        </form>
+        </div></div>
+        <br />
+
+        </div>
+        </div>
+      </div>
+      </ion-content>
     </ion-view>
   </script>
 
@@ -216,35 +236,39 @@
       <ion-content>
       <div class="card">
         <div class="item item-text-wrap">
-        Admin – Eloise du Plessis
-  Tel: 021-882 9541
-  Fax: 086 756 8656
-  Email: info@fruitfly.co.za
+      <p>Viking</p>
+        <p>Tel:  021 907 3000</p>
+        <p>Fax: 021 905 7113</p>
+        <p>Email: info@viking.co.za</p>
         </div>
       </div>
 
       <div class="card">
         <div class="item item-text-wrap">
-        Manager – Nando Baard
-  Cell: 084 217 0285
-  Fax: 086 756 8656
-  Email: nando@fruitfly.co.za
+        <p>Physical Address</p>
+        <p>Viking Gebou</p>
+        <p>C/o Riesling & Shiraz Straat</p>
+        <p>Saxenburg Park 1</p>
+        <p>Blackheath</p>
+        <p>7581</p>
         </div>
       </div>
 
       <div class="card">
         <div class="item item-text-wrap">
-        Facility Supervisor – Nathan Vermeulen
-  Tel: 021-882 9541
-  Email: nathan@fruitfly.co.za
+        <p>Postal Address:</p>
+        <p>PO Box 51</p>
+        <p>Blackheath</p>
+        <p>7581</p>
         </div>
       </div>
 
       <div class="card">
         <div class="item item-text-wrap">
-        Facility Maintenance Manager – Jerome Johnson
-  Tel: 021-882 9541
-  Email: jerome@fruitfly.co.za
+        <p>GPS Coordinates:</p>
+        <p>E18° 42' 13"</p>
+        <p>S33° 57' 15"</p>
+
         </div>
       </div>
 
