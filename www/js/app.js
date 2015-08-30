@@ -74,8 +74,7 @@ The controller sets properties on the scope, and the view binds to those propert
   console.log('HomeTabCtrl');
 });
 
-//Parse.initialize("ZunQGkmJDa2Ec6QY24E8jmqqkn8RzhcHKiwOcY6O", "wI4KKjeRqOlHAZRfnpGoypCveD6ZcbNopeDnYMuv");
-Parse.initialize("VeOAN2nRQDXf2CJ1aypkAeVGIhHbSuI05b1Hwlgd", "BhlQJ6JTZ9mV0kBhViVOKeFPddNKubrz5camfsS8");
+Parse.initialize("ZunQGkmJDa2Ec6QY24E8jmqqkn8RzhcHKiwOcY6O", "wI4KKjeRqOlHAZRfnpGoypCveD6ZcbNopeDnYMuv");
 Parse.User.enableRevocableSession()
 
 example.controller("ExampleController", function($scope) {
