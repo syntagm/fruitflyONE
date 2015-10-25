@@ -4216,6 +4216,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
     color: #00763a; }
   .tab-item.tab-item-active.tab-item-dark, .tab-item.active.tab-item-dark, .tab-item.activated.tab-item-dark {
     color: #444; }
+    .tab-item.tab-item-active.tab-item-fly, .tab-item.active.tab-item-fly, .tab-item.activated.tab-item-fly {
+      color: #ffecc9; }
 
 .item.tabs {
   display: -webkit-box;
@@ -4726,6 +4728,10 @@ ion-tabs.tabs-color-active-dark .tab-item {
     border-color: #111;
     background-color: #444;
     color: #fff; }
+    .item.item-fly {
+      border-color: #111;
+      background-color: #ffecc9;
+      color: #fff; }
   .item[ng-click]:hover {
     cursor: pointer; }
 
