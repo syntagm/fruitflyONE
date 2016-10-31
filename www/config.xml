@@ -17,6 +17,7 @@
   </author>
 
   <content src="index.html"/>
+  <plugin name="com.phonegap.plugins.childbrowser" spec="5.0.0" source="pgb" />
   <access origin="*"/>
   <!-- Customize your app and platform with the preference element. -->
   <preference name="phonegap-version"           value="3.6.3" />          <!-- all: current version of PhoneGap -->
